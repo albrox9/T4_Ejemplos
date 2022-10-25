@@ -30,7 +30,16 @@ public class MainActivity extends AppCompatActivity {
 
         Button boton = (Button) v;
         this.n++;
-        boton.setText("Pulsado " + n + " veces");
+        //EJERCICIO9.
+        //boton.setText("Pulsado " + n + " veces");
+
+        //PASO SIGUIENTE
+        if(this.n == 1){
+            boton.setText("Pulsado " + n + " vez");
+
+        } else{
+            boton.setText("Pulsado " + n + " veces");
+        }
 
         //String etiqueta = boton.getText().toString();
         //guardo el contenido del boton en ese momento.
