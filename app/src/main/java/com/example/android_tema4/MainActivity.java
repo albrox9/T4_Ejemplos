@@ -10,12 +10,13 @@ import androidx.appcompat.app.AppCompatActivity;
 
 public class MainActivity extends AppCompatActivity {
 
-
+    private int n;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
 
+        this.n=0;
         Button b = (Button) findViewById(R.id.idBoton); //Inicializo el boton al ue tengo
         //En la clase R, xml id, y el id que le he puesto al botón
 
@@ -28,11 +29,23 @@ public class MainActivity extends AppCompatActivity {
     private void accionBoton (View v){
 
         Button boton = (Button) v;
+        this.n++;
+        //EJERCICIO9.
+        //boton.setText("Pulsado " + n + " veces");
 
-        String etiqueta = boton.getText().toString();
+        //PASO SIGUIENTE
+        if(this.n == 1){
+            boton.setText("Pulsado " + n + " vez");
+
+        } else{
+            boton.setText("Pulsado " + n + " veces");
+        }
+
+        //String etiqueta = boton.getText().toString();
         //guardo el contenido del boton en ese momento.
 
-        if (etiqueta == "UNO") {
+        //CICLAR ENTRE UNO Y DOS.
+        /*if (etiqueta == "UNO") {
 
             boton.setText("DOS");//Con el set, cambio el texto del botón
             //Como está en el onCLick, me cambia el texto al pulsar.
@@ -40,6 +53,6 @@ public class MainActivity extends AppCompatActivity {
         } else {
 
             boton.setText("UNO");
-        }
+        }*/
     }
 }
