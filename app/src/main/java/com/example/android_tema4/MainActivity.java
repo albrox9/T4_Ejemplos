@@ -10,17 +10,19 @@ import androidx.appcompat.app.AppCompatActivity;
 
 public class MainActivity extends AppCompatActivity {
 
-    private int n;
+    private int n; //declaro el contador fuera para poder usarlo.
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
 
-        this.n=0;
-        Button b = (Button) findViewById(R.id.idBoton); //Inicializo el boton al ue tengo
-        //En la clase R, xml id, y el id que le he puesto al botón
+        this.n=0; //la inicializamos dentro del onCreate;
+        Button b = (Button) findViewById(R.id.idBoton);
+        /*Inicializo el boton al que tengo
+        En la clase R, xml id, y el id que le he puesto al botón*/
 
-        b.setOnClickListener(v -> {accionBoton(v);});
+        b.setOnClickListener(v -> {this.accionBoton(v);});
         //Lo expresamos con una función lambda.
 
     }
@@ -29,17 +31,17 @@ public class MainActivity extends AppCompatActivity {
     private void accionBoton (View v){
 
         Button boton = (Button) v;
-        this.n++;
-        //EJERCICIO9.
-        //boton.setText("Pulsado " + n + " veces");
 
-        //PASO SIGUIENTE
-        if(this.n == 1){
-            boton.setText("Pulsado " + n + " vez");
 
-        } else{
-            boton.setText("Pulsado " + n + " veces");
-        }
+        this.n++; //lo incremento a 1, cada vez que se ejecute.
+        String mensaje = getResources().getQuantityString(
+                R.plurals.numPulsaciones,
+                this.n,//selector de caso (sigular, plural).
+                this.n //numero de veces.
+        );
+
+        boton.setText(mensaje);
+
 
         //String etiqueta = boton.getText().toString();
         //guardo el contenido del boton en ese momento.

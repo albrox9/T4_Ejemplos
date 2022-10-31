@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="app_name">Vacio</string>
+    <string name="pulsa">PULSA</string>
+    <string name="nVeces">Pulsado %1$d veces</string>
+    <plurals name="numPulsaciones">
+        <item quantity="one">Pulsado %1$d vez</item>
+        <item quantity="other">Pulsado %1$d veces</item>
+    </plurals>
+</resources>

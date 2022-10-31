@@ -1,11 +1,11 @@
 <?xml version="1.0" encoding="utf-8"?>
+<!--Esta activity tiene un solo botón que la ocupa entera-->
 <Button
     xmlns:android = "http://schemas.android.com/apk/res/android"
     android:id = "@+id/idBoton"
     android:layout_width = "match_parent"
     android:layout_height = "wrap_content"
     android:textSize="30dp"
-    android:text = "UNO"
-    android:onClick="accionBoton"
+    android:text = "@string/pulsa"
 
     />

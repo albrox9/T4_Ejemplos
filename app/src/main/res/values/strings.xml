@@ -1,3 +1,10 @@
 <resources>
-    <string name="app_name">Android_tema4</string>
+    <string name="app_name">Empty</string>
+    <string name="pulsa">Press</string>
+    <string name="nVeces">Press %1$d times</string>
+    <plurals name="numPulsaciones">
+        <item quantity="one">Touched %1$d time</item>
+        <item quantity="other">Touched %1$d times</item>
+    </plurals>
+
 </resources>
